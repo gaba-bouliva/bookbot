@@ -5,10 +5,7 @@ def character_count(text):
   char_counter = {}
 
   for char in text:
-    if char.lower() in char_counter:
-      char_counter[char.lower()] += 1 
-    else:
-      char_counter[char.lower()] = 1
+    char_counter[char.lower()] = char_counter.get(char.lower(), 0) + 1 
 
   return char_counter
 
